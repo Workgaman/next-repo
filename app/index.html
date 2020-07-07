@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    
+
+
+
+    <!-- The first thing in any HTML file should be the charset -->
+    <meta charset="utf-8">
+    <!-- Make the page mobile compatible -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>RTf Customer Dashboard</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/favicons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicons/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+    <link rel="manifest" href="/favicons/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/favicons/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#2196F3" />
+    <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!-- Facebook -->
+    <meta property="author" content="enlite" />
+    <meta property="og:site_name" content="enlite.ux-maestro.com" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/logo.jpg" />
+    <!-- Twitter -->
+    <meta property="twitter:site" content="enlite.ux-maestro.com" />
+    <meta property="twitter:domain" content="enlite.ux-maestro.com" />
+    <meta property="twitter:creator" content="enlite" />
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:image:src" content="/logo.jpg" />
+
+    <style>
+      #app { position: absolute;top:0;left: 0;background: #fafafa;width: 100%;min-height: 100%;z-index: 1000; display: flex;}
+      .preloader-init { position: absolute; top: calc(50% - 65px); left: calc(50% - 65px) }
+    </style>
+
+
+ <style>
+  .slick-headerrow-column {
+      background: #87b6c9;
+      text-overflow: clip;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+    .MuiFab-root{
+      display: none;
+    }
+
+    .slick-headerrow-column input {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+    .logo_brand{
+      position: relative; top: 9px;font-size: 14px;
+    }
+    .slick-cell-checkboxsel {
+      background: #f0f0f0;
+      border-right-color: silver;
+      border-right-style: solid;
+    }
+
+    .slick-columnpicker-list li {
+      margin: 4px;
+    }
+    .slick-columnpicker-list label {
+      padding: 1px;
+      display: block;
+      cursor: pointer;
+    }
+
+    #myGrid input[type=checkbox], 
+    .slick-columnpicker-list input[type=checkbox] { 
+      display:none; /* to hide the checkbox itself */
+    } 
+    .myGrid input[type=checkbox], 
+    .slick-columnpicker-list input[type=checkbox] { 
+      display:none; /* to hide the checkbox itself */
+    }
+    #myGrid input[type=checkbox] + label:before,
+    .slick-columnpicker-list input[type=checkbox] + label:before {
+      cursor: pointer;
+      font-family: FontAwesome;
+      color: rgb(143, 14, 106);
+      font-weight: bold;
+      display: inline-block;
+      content: "\f00c";
+      font-size: 13px;
+      margin-right: 4px;
+    }
+    .myGrid input[type=checkbox] + label:before,
+    .slick-columnpicker-list input[type=checkbox] + label:before {
+      cursor: pointer;
+      font-family: FontAwesome;
+      color: rgb(143, 14, 106);
+      font-weight: bold;
+      display: inline-block;
+      content: "\f00c";
+      font-size: 13px;
+      margin-right: 4px;
+    }
+    .myGrid input[type=checkbox] + label:before,
+    .slick-columnpicker-list input[type=checkbox] + label:before { 
+      opacity: 0.2; /* unchecked icon */
+    } 
+    
+    #myGrid input[type=checkbox] + label:before,
+    .slick-columnpicker-list input[type=checkbox] + label:before { 
+      opacity: 0.2; /* unchecked icon */
+    } 
+    
+    #myGrid input[type=checkbox]:checked + label:before,
+    .slick-columnpicker-list input[type=checkbox]:checked + label:before { 
+      opacity: 1; /* checked icon */
+    }
+
+    .myGrid input[type=checkbox]:checked + label:before,
+    .slick-columnpicker-list input[type=checkbox]:checked + label:before { 
+      opacity: 1; /* checked icon */
+    }
+
+
+    </style>
+
+
+  <link rel="stylesheet" href="https://mleibman.github.io/SlickGrid/controls/slick.pager.css" type="text/css"/>
+
+    <link rel="stylesheet" href="https://mleibman.github.io/SlickGrid/slick.grid.css" type="text/css"/>
+  <link rel="stylesheet" href="https://mleibman.github.io/SlickGrid/css/smoothness/jquery-ui-1.8.16.custom.css" type="text/css"/>
+  
+
+  <link rel="stylesheet" href="https://mleibman.github.io/SlickGrid/controls/slick.columnpicker.css" type="text/css"/>
+
+  <link rel="stylesheet" href="http://6pac.github.io/SlickGrid/examples/examples.css">
+
+    <link rel="stylesheet" href="http://6pac.github.io/SlickGrid/css/smoothness/jquery-ui.css" type="text/css"/>
+  <link rel="stylesheet" href="http://6pac.github.io/SlickGrid/slick.grid.css" type="text/css"/>
+  <link rel="stylesheet" href="http://6pac.github.io/SlickGrid/controls/slick.columnpicker.css" type="text/css"/>
+
+  <style>
+    .slick-cell-checkboxsel {
+      background: #f0f0f0;
+      border-right-color: silver;
+      border-right-style: solid;
+    }
+    .slick-columnpicker{
+    position: absolute;
+    z-index: 99999;
+    }
+    .myIcon{
+
+    }
+
+.myIcon_new{
+    max-width: 40px;
+    margin: 0 auto;
+    display: block;
+        }
+            
+    .MuiToolbar-root{
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+}
+</style>
+</style>
+  </head>
+  <body>
+    <!-- Display a message if JS has been disabled on the browser. -->
+    <noscript>If you're seeing this message, that means <strong>JavaScript has been disabled on your browser</strong>, please <strong>enable JS</strong> to make this app work.</noscript>
+
+    <!-- The app hooks into this div -->
+    <div id="app">
+      <img src="/images/spinner.gif" class="preloader-init" alt="spinner" />
+    </div>
+    <!-- A lot of magic happens in this file. HtmlWebpackPlugin automatically includes all assets (e.g. bundle.js, main.css) with the correct HTML tags, which is why they are missing in this HTML file. Don't add any assets here! (Check out webpackconfig.js if you want to know more) -->
+  </body>
+
+
+<script src="http://6pac.github.io/SlickGrid/lib/jquery-1.12.4.min.js"></script>
+<script src="http://6pac.github.io/SlickGrid/lib/jquery-ui.min.js"></script>
+<script src="http://6pac.github.io/SlickGrid/lib/jquery.event.drag-2.3.0.js"></script>
+
+<script src="./lib/jquery-ui-1.8.16.custom.min.js"></script>
+<script src="./lib/jquery.event.drag-2.2.js"></script>
+<script src="./lib/jquery.event.drop-2.2.js"></script>
+
+<script src="http://6pac.github.io/SlickGrid/plugins/slick.checkboxselectcolumn.js"></script>
+<script src="http://6pac.github.io/SlickGrid/plugins/slick.rowselectionmodel.js"></script>
+<script src="http://6pac.github.io/SlickGrid/plugins/slick.autotooltips.js"></script>
+<script src="http://6pac.github.io/SlickGrid/plugins/slick.resizer.js"></script>
+
+
+<script src="http://6pac.github.io/SlickGrid/controls/slick.columnpicker.js"></script>
+
+
+<script src="http://6pac.github.io/SlickGrid/slick.core.js"></script>
+<script src="./plugins/slick.cellrangeselector.js"></script>
+<script src="./plugins/slick.cellselectionmodel.js"></script>
+<script src="./plugins/slick.rowselectionmodel.js"></script>
+<script src="./plugins/slick.rowmovemanager.js"></script>
+
+
+<script src="http://6pac.github.io/SlickGrid/slick.remotemodel.js"></script>
+
+<script src="http://6pac.github.io/SlickGrid/slick.formatters.js"></script>
+<script src="http://6pac.github.io/SlickGrid/slick.dataview.js"></script>
+<script src="./js/pager.js"></script>
+
+<script src="http://6pac.github.io/SlickGrid/slick.grid.js"></script>
+
+</html>
